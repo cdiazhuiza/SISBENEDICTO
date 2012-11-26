@@ -15,5 +15,4 @@ public class AdminisUsuario {
     private  ArrayList<Usuario> Usuarios = new  ArrayList<Usuario>();
     
     
-    public 
 }

@@ -11,10 +11,6 @@ import javax.swing.JOptionPane;
  *
  * @author Cesar
  */
-
-
-
-
 public class AuntenticacionUser extends javax.swing.JFrame {
 
     /**
@@ -33,29 +29,17 @@ public class AuntenticacionUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jInternalFrame1 = new javax.swing.JInternalFrame();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Usuario:");
+        jTextField1.setName(""); // NOI18N
+
+        jTextField2.setName("txtContra"); // NOI18N
 
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,9 +50,7 @@ public class AuntenticacionUser extends javax.swing.JFrame {
 
         jLabel2.setText("Contraseña:");
 
-        jTextField1.setName(""); // NOI18N
-
-        jTextField2.setName("txtContra"); // NOI18N
+        jLabel1.setText("Usuario:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,7 +69,7 @@ public class AuntenticacionUser extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addGap(38, 38, 38)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 38, Short.MAX_VALUE))
+                .addGap(0, 96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,13 +84,8 @@ public class AuntenticacionUser extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
-
-        jLabel1.getAccessibleContext().setAccessibleName("lblUsuario");
-        jTextField1.getAccessibleContext().setAccessibleName("txtUsuario");
-        jTextField1.getAccessibleContext().setAccessibleParent(null);
-        jTextField2.getAccessibleContext().setAccessibleName("txtContra");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -116,8 +93,8 @@ public class AuntenticacionUser extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         // TODO add your handling code here:
-        
-       
+
+  
         
         AutenticacionUsuario auth = new AutenticacionUsuario();
        if( auth.validacionUsuario(jTextField1.getText(), jTextField2.getText()) == 1)
@@ -130,7 +107,7 @@ public class AuntenticacionUser extends javax.swing.JFrame {
                                     "Logueo MAL", 
                                     "Titulo", 
                                     JOptionPane.INFORMATION_MESSAGE);
-           
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -169,7 +146,6 @@ public class AuntenticacionUser extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField1;
