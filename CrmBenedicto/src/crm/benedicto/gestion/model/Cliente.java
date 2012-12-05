@@ -1,5 +1,5 @@
 
-package crm.benedicto.gestion;
+package crm.benedicto.gestion.model;
 
 import java.util.Date;
 

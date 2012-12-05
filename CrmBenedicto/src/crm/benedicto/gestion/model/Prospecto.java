@@ -1,5 +1,5 @@
 
-package crm.benedicto.gestion;
+package crm.benedicto.gestion.model;
 
 import java.util.Date;
 
@@ -9,12 +9,12 @@ public class Prospecto {
     private String apellidopaterno;
     private String apellidomaterno;
     private String email;
-    private int dni;
-    private int telefono;
-    private int celular;
+    private String dni;
+    private String telefono;
+    private String celular;
     private Date fechadecontacto;
 
-    public Prospecto(int codigo, String nombres, String apellidopaterno, String apellidomaterno, String email, int dni, int telefono, int celular, Date fechadecontacto) {
+    public Prospecto(int codigo, String nombres, String apellidopaterno, String apellidomaterno, String email, String dni, String telefono, String celular, Date fechadecontacto) {
         this.nombres = nombres;
         this.apellidopaterno = apellidopaterno;
         this.apellidomaterno = apellidomaterno;
@@ -62,27 +62,27 @@ public class Prospecto {
         this.email = email;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 

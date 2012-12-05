@@ -1,5 +1,6 @@
-package crm.benedicto.gestion;
+package crm.benedicto.gestion.controler;
 
+import crm.benedicto.gestion.model.Prospecto;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -13,7 +14,7 @@ public class GestionProspecto {
         }
         
         public void IngresarProspecto(int codigo, String nombres, String apellidopaterno,
-                String apellidomaterno, String email, int dni, int telefono, int celular, Date fechadecontacto){
+                String apellidomaterno, String email, String dni, String telefono, String celular, Date fechadecontacto){
             StringBuilder Validacion= new StringBuilder();
             String ProspectoGenerado="";
             
@@ -22,9 +23,9 @@ public class GestionProspecto {
      Validacion.append( ValidarString(apellidopaterno.toString().trim())? "": "\n  Ingresar Apellido Paterno");
      Validacion.append( ValidarString(apellidomaterno.toString().trim())? "": "\n  Ingresar Apellido Materno");
      Validacion.append( ValidarString(email.toString().trim())? "": "\n  Ingresar Email");
-     Validacion.append( ValidarNumero(dni)? "": "\n  Ingresar DNI");
-     Validacion.append( ValidarNumero(telefono)? "": "\n  Ingresar Telefono ");
-     Validacion.append( ValidarNumero(celular)? "": "\n  Ingresar Celular ");
+     Validacion.append( ValidarString(dni)? "": "\n  Ingresar DNI");
+     Validacion.append( ValidarString(telefono)? "": "\n  Ingresar Telefono ");
+     Validacion.append( ValidarString(celular)? "": "\n  Ingresar Celular ");
      Validacion.append( ValidarFecha(fechadecontacto)? "": "\n  Ingresar Fecha de Contacto");                                                                                                                                                                                                                                                                                                                                                                                                                               
      Validacion.append( "");
      
@@ -97,32 +98,31 @@ public class GestionProspecto {
        }
       }
    
-         public void BuscarDNI(Int dni){
-    for(int i = 0; i< Prospectos.size();i++){
-        if(this.Prospectos.get(i).getDni() == dni){
+         public void BuscarDNI(String dni){
+         for(int i = 0; i< Prospectos.size();i++){
+        if(this.Prospectos.get(i).getDni().equals(dni)){
            ProspectosBusqueda.add(this.Prospectos.get(i));
         }
        }
       }
          
          
-         public void BuscarTelefono(Int telefono){
+         public void BuscarTelefono(String telefono){
     for(int i = 0; i< Prospectos.size();i++){
-        if(this.Prospectos.get(i).getTelefono() == telefono){
+        if(this.Prospectos.get(i).getTelefono().equals(telefono)){
            ProspectosBusqueda.add(this.Prospectos.get(i));
         }
        }
       }
     
-         public void BuscarCelular(Int celular){
+         public void BuscarCelular(String celular){
     for(int i = 0; i< Prospectos.size();i++){
-        if(this.Prospectos.get(i).getCelular() == celular){
+        if(this.Prospectos.get(i).getCelular().equals( celular)){
            ProspectosBusqueda.add(this.Prospectos.get(i));
         }
        }
       }
          
-  
          public void BuscarFechadecontacto(Date fechadecontacto){
     for(int i = 0; i< Prospectos.size();i++){
         if(this.Prospectos.get(i).getFechadecontacto() == fechadecontacto){

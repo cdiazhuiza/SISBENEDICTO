@@ -1,6 +1,7 @@
 
-package crm.benedicto.gestion;
+package crm.benedicto.gestion.controler;
 
+import crm.benedicto.gestion.model.Cliente;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -16,7 +17,6 @@ public class GestionCliente {
         public void IngresarCliente(int codigo, String nombres, String apellidopaterno, String apellidomaterno, String email, int dni, int telefono, int celular, Date fechadecontacto){
             StringBuilder Validacion = new StringBuilder();
             String ClienteGenerado="";
-            
             
             Validacion.append( ValidarString(nombres.toString().trim())? "": "\n  Ingresar Nombres");
             Validacion.append( ValidarString(apellidopaterno.toString().trim())? "": "\n  Ingresar Apellido Paterno");
